@@ -16,7 +16,7 @@ app.views.Home = Backbone.View.extend({
     albums.fetch({
       success: function(albums, response, options) {
         albums.forEach(function(album) {
-        _this.$el.find("#albums").append("<li><a href='#' class='album-link' data-id='" + album.id + "'>" + album.title() + "</a></li>");
+        _this.$el.find("#albums").append("<li><a href='#' class='album-link' data-id='" + album.id + "'>" + album.title() + "</a></li>" + "by " + album.artist());
         });
       }
     });

@@ -10,7 +10,8 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'thin'
 gem 'pry'
-gem 'ejs'	
+gem 'ejs'
+gem 'jasmine'	
 
 
 # Gems used only for assets and not required

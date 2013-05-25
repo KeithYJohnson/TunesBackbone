@@ -1,4 +1,6 @@
 TunesBackbone::Application.routes.draw do
+  resources :albums
+
   get "home/index"
 
   # The priority is based upon order of creation:

@@ -6,7 +6,9 @@ app.Router = Backbone.Router.extend({
   },
 
   home: function() {
+
     var view = new app.views.Home();
+    console.log(view);
     $('#content').html(view.render().el);
   }
 

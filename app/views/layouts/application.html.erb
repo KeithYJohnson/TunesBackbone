@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TunesBackbone</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+
+  <% if false %>
+    <script type="text/template" id="album-template">
+      <span class="album-title"><%= title %></span>
+      <span class="artist-name"><%= artist %></span>
+      <ol class="tracks">
+        <% _.each(tracks, function(track) { %>
+          <li><%= track.title %></li>
+        <% }); %>
+      </ol>
+    </script>
+  <% end %>
+
+</head>
+<body>
+
+
+
+ 
+
+
+
+  <body>
+    <section id="content">
+    	Hi
+    </section>
+  </body>
+</html>
+
+
+<%= yield %>
+
+	<%= javascript_include_tag "application" %>  
+</body>
+</html>

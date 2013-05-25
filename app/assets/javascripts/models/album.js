@@ -1,14 +1,29 @@
 app.models.Album = Backbone.Model.extend({
 
-  // Add a URL Structure, configure in routes.rb
-title: function() {
-	return this.attributes.title;
-},
 
-artist: function() {
-	return this.attributes.artist;
-}
+	initialize: function() {
+	  this.tracks = new app.collections.TrackList();
+	  this.tracks.model = app.models.Skill; 
+	},
 
-  });
+	title: function() {
+		return this.attributes.title;
+	},
 
-// var album = new app.models.Album();
+	artist: function() {
+		return this.attributes.artist;
+	},
+
+	tracks: function() {
+		return this.attributes.tracks;
+	},	
+
+	isFirstTrack: function(index) {
+		return index == 0;
+	},
+
+	isLastTrack: function(index) {
+		return index >= this.get('tracks').length-1;
+	}
+
+});

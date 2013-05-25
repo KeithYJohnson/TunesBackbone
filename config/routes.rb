@@ -1,11 +1,10 @@
 TunesBackbone::Application.routes.draw do
-  get "tracks/index"
-
-  get "tracks/show"
-
-  resources :albums
-
   get "home/index"
+
+  resources :albums do
+    resources :tracks, :only => [:index, :show] do
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

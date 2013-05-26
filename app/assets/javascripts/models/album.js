@@ -16,7 +16,7 @@ app.models.Album = Backbone.Model.extend({
 
 	tracks: function() {
 		return this.attributes.tracks;
-	},	
+	},
 
 	isFirstTrack: function(index) {
 		return index == 0;

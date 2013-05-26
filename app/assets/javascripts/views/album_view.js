@@ -4,20 +4,29 @@ app.views.AlbumView = Backbone.View.extend({
   id: 'album-page',
   template: JST['templates/album'],
 
+  events: {
+    'click .queue-add' : 'selectAlbum',
+    'click .queue-remove' : 'removeAlbum'
+  },
+
 	render: function (){
 		// Find the HTML template content located somewhere in the HTML document, Setup the template engine
-    var _this= this;
     // Get some HTML from somewhere
-    var album = this.template({album: this.model });
+    var newalbum = this.template({album : this.model});
 
-    // console.log(this.model);
-    console.log(album);
-    console.log(this.model);
-    album_info = this.model;
-    // Append it to this view's div#bio element
-    this.$el.html(album);
+    // Append it to this view's div#album-page element
+    this.$el.html(newalbum);
 
     return this;
+  },
+
+  selectAlbum: function(){
+    console.log('hi');
+  },
+
+  removeAlbum: function() {
+    console.log('bye');
   }
 
 });
+

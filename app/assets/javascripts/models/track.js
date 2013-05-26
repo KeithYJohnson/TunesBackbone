@@ -13,7 +13,4 @@ app.models.Track = Backbone.Model.extend({
 		return this.attributes.album_id;
 	}
 
-	isFirstTrack: function(index) {
-		return index == 0;
-	}
 });

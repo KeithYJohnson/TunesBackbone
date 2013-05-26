@@ -6,20 +6,9 @@ app.views.Home = Backbone.View.extend({
     'click #add-album' : 'albumSelect'
   },
 
-  initialize: function (){
-    // The reset event is fired when a group of models is loaded into a collection
-    // this.collection.bind('reset', this.render);
-  },
-
-  render: function() {
-    // Find ul list element from the current element's markup
-    // and insert some rendered views into it
-        
+  render: function() {        
     albumList = new app.collections.AlbumList();
-
     var _this = this;
-
-
     // This simply renders the template without passing any data to it
     $(this.el).html(this.template({}));
     // $albums will now refer to the part in the template we want to append to
@@ -29,7 +18,8 @@ app.views.Home = Backbone.View.extend({
           // console.log(album);
 
           var view = new app.views.AlbumView({
-            model: album
+            model: album,
+            collection: _this.collection
           });
           // append to the dom
 
@@ -41,22 +31,4 @@ app.views.Home = Backbone.View.extend({
     return this;
   }  
 
-    //   console.log(album);
-    //   var view = new apps.views.AlbumView({
-    //     model: album
-    //   });
-    //   // Append to the DOM
-    //   $albums.append(view.render().el);
-    // });
-    // return this;
-
-  // albums.fetch({
-  //   success: function(albums, response, options) {
-  //     albums.forEach(function(album) {
-  //     _this.$el.find("#albums").append("<li><button class='btn btn-primary' img='add.png' id='add-album'>Add</button><a href='#' class='album-link' data-id='" + album.id + "'>" + album.title() + "</a></li>" + "by " + album.artist());
-  //     });
-  //   }
-  // });
-  //   return this;
-  // },
 });

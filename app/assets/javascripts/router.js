@@ -1,26 +1,17 @@
 app.Router = Backbone.Router.extend({
 
   routes: {
-    '' : 'home',
-    // 'users/:id' : 'userShow'
+    '' : 'home'
   },
 
   home: function() {
+    var playlist = new app.collections.Playlists();
 
-    var view = new app.views.Home();
-    $('#content').html(view.render().el);
-    // dropped off .el after .render()
+    var view = new app.views.Home({collection:playlist});
+    $('#content').html(view.render().el); 
+    // Assigning a new key(playlist, with the collection 'playlist' )
+    var player = new app.views.PlaylistView({collection:playlist});
+    $('#player').html(player.render().el);
   }
-
-  // userShow: function(user_id) {
-  //   var user = new app.models.User({id: user_id});
-  //   user.fetch({
-  //     success : function(user){
-  //           var view = new app.views.ProjectView({ model : user });
-  //           $('#content').html(view.render().el);
-  //     }
-  //   });
-
-  // }
 
 });

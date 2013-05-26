@@ -11,6 +11,40 @@
  *= require_self
  *= require_tree .
  */
+#wrapper{
+	width: 1100px;
+	border: 4px solid black;
+	position: fixed;
+}
+
+#player{
+	width: 300px;
+	border: 2px solid black;
+	position: relative;
+	float: left;
+	display: inline-block;
+	padding-bottom: 10px;
+	padding-left: 10px;	
+	background: #333333;
+	color: white;
+	
+}
+
+#content{
+	width: 700px;
+	border: 2px solid black;
+	position: relative;
+	float: left;
+	display: inline-block;
+	padding-bottom: 10px;
+	padding-left: 20px;		
+}
+
+.btn-small{
+	border-radius: 10px;
+}
+
+
 .album-artist{
 	color: #778ca4;
 }
@@ -18,6 +52,20 @@
 td {
 	padding-left: 5px;
 }
+
+img.remove-album{
+	height: 5px;
+	width: auto;
+	border: none;
+}
+
+li.playlist-album{
+	font-size: 20px;
+}
+
+img.album-remove{
+}
+
 
 .playlist .album .queue-add{
 	display: none;

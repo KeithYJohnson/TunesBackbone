@@ -3,7 +3,7 @@ app.models.Album = Backbone.Model.extend({
 
 	initialize: function() {
 	  this.tracks = new app.collections.TrackList();
-	  this.tracks.model = app.models.Skill; 
+
 	},
 
 	title: function() {

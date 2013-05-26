@@ -1,4 +1,4 @@
-app.views.AlbumView = Backbone.View.extend({
+window.app.views.AlbumView = Backbone.View.extend({
 
   tagName: 'div',
   id: 'album-page',
@@ -21,7 +21,9 @@ app.views.AlbumView = Backbone.View.extend({
   },
 
   selectAlbum: function(){
-    console.log('hi');
+    console.log(this.model);
+    this.collection.add(this.model);
+    console.log(this.model.cid);
   },
 
   removeAlbum: function() {

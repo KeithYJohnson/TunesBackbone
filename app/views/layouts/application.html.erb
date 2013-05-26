@@ -6,35 +6,12 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 
-  <% if false %>
-    <script type="text/template" id="album-template">
-      <span class="album-title"><%= title %></span>
-      <span class="artist-name"><%= artist %></span>
-      <ol class="tracks">
-        <% _.each(tracks, function(track) { %>
-          <li><%= track.title %></li>
-        <% }); %>
-      </ol>
-    </script>
-  <% end %>
-
 </head>
 <body>
-
-
-
- 
-
-
-
-  <body>
-    <section id="content">
-    	Hi
-    </section>
-  </body>
-</html>
-
-
+    <div id="wrapper">
+      <section id="player">Player</section>
+      <section id="content">Hi</section>
+    </div>
 <%= yield %>
 
 	<%= javascript_include_tag "application" %>  

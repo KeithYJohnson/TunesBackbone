@@ -1,0 +1,18 @@
+<h1> Playlist </h1>
+
+<nav>
+	<button class="control play btn-small btn-inverse">Play</button>
+	<button class="control pause btn-small btn-inverse">Pause</button>
+	<button class="control prev btn-small btn-inverse">Prev</button>
+	<button class="control next btn-small btn-inverse">Next</button>
+</nav>
+
+<ul class="albums">
+	<% albums.forEach (function(album){ %>
+		<li class='playlist-album'><%= album.get('title') %><img class="icon-remove-sign icon-white album-remove" data-cid<%=album.cid%>></img></li> 
+	<%	}); %> 
+	
+
+</ul>
+
+

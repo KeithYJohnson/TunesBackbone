@@ -1,10 +1,10 @@
 app.models.Album = Backbone.Model.extend({
 
+	urlRoot: 'albums',
 
-	initialize: function() {
-	  this.tracks = new app.collections.TrackList();
+  initialize: function() {
 
-	},
+  },  
 
 	title: function() {
 		return this.attributes.title;
@@ -14,9 +14,13 @@ app.models.Album = Backbone.Model.extend({
 		return this.attributes.artist;
 	},
 
-	tracks: function() {
-		return this.attributes.tracks;
-	},
+  getTracks: function() {
+    this.tracks = new app.collections.TrackList();
+    this.tracks.url = '/albums/' + this.id + '/tracks';
+    this.tracks.fetch();
+    return this.tracks
+    // return this.tracks.where({ album_id : this.id });
+  },
 
 	isFirstTrack: function(index) {
 		return index == 0;

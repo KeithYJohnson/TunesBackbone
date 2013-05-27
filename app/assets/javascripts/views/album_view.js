@@ -6,7 +6,8 @@ window.app.views.AlbumView = Backbone.View.extend({
 
   events: {
     'click .queue-add' : 'selectAlbum',
-    'click .queue-remove' : 'removeAlbum'
+    'click .show-tracks' : 'showTracks'
+    // 'click .queue-remove' : 'removeAlbum'
   },
 
 	render: function (){
@@ -21,13 +22,17 @@ window.app.views.AlbumView = Backbone.View.extend({
   },
 
   selectAlbum: function(){
-    console.log(this.model);
     this.collection.add(this.model);
-    console.log(this.model.cid);
   },
 
-  removeAlbum: function() {
-    console.log('bye');
+  showTracks: function(){
+    // this.model.tracks = new app.collections.TrackList();
+    // this.model.tracks.url = '/albums/' + this.model.id + '/tracks';
+    // tracks = this.model.tracks.fetch();
+    // console.log(tracks);
+    tracks = this.model.getTracks();
+    console.log(tracks);
+  
   }
 
 });

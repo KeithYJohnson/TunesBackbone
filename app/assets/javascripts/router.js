@@ -2,6 +2,7 @@ app.Router = Backbone.Router.extend({
 
   routes: {
     '' : 'home'
+
   },
 
   home: function() {
@@ -12,6 +13,7 @@ app.Router = Backbone.Router.extend({
     // Assigning a new key(playlist, with the collection 'playlist' )
     var player = new app.views.PlaylistView({collection:playlist});
     $('#player').html(player.render().el);
-  }
+  },
+
 
 });

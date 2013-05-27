@@ -1,9 +1,6 @@
 app.models.Track = Backbone.Model.extend({
 
-  url: function() {
-  var url = '/albums/' + this.album.id + '/tracks';		
-  return url;
-  },
+
 
 	title: function() {
 		return this.attributes.title;

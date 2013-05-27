@@ -1,7 +1,5 @@
 app.models.Track = Backbone.Model.extend({
-
-
-
+  
 	title: function() {
 		return this.attributes.title;
 	},

@@ -25,7 +25,6 @@ app.views.PlaylistView = Backbone.View.extend ({
 		var cid = $(event.target).data('cid');
 		var remove = this.collection.findWhere({cid : cid});
 		this.collection.remove(remove);
-		// event.currentTarget
 	}
 
 });

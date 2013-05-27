@@ -4,7 +4,4 @@ app.collections.TrackList = Backbone.Collection.extend({
   url: function(){
     return '/albums/' + this.album.id + 'tracks'
   }
-
-
-
 });

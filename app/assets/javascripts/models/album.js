@@ -18,7 +18,6 @@ app.models.Album = Backbone.Model.extend({
   getTracks: function() {
     this.tracks.fetch();
     return this.tracks
-    // return this.tracks.where({ album_id : this.id });
   },
 
 	isFirstTrack: function(index) {

@@ -7,17 +7,11 @@ window.app.views.AlbumView = Backbone.View.extend({
   events: {
     'click .queue-add' : 'selectAlbum',
     'click .show-tracks' : 'showTracks'
-    // 'click .queue-remove' : 'removeAlbum'
   },
 
 	render: function (){
-		// Find the HTML template content located somewhere in the HTML document, Setup the template engine
-    // Get some HTML from somewhere
     var newalbum = this.template({album : this.model});
-
-    // Append it to this view's div#album-page element
     this.$el.html(newalbum);
-
     return this;
   },
 
@@ -26,13 +20,8 @@ window.app.views.AlbumView = Backbone.View.extend({
   },
 
   showTracks: function(){
-    // this.model.tracks = new app.collections.TrackList();
-    // this.model.tracks.url = '/albums/' + this.model.id + '/tracks';
-    // tracks = this.model.tracks.fetch();
-    // console.log(tracks);
     tracks = this.model.getTracks();
     console.log(tracks);
-  
   }
 
 });

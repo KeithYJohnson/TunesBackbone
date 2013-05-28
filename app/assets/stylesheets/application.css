@@ -66,6 +66,10 @@ li.playlist-album{
 img.album-remove{
 }
 
+button.hide-tracks{
+	display: none;
+}
+
 
 .playlist .album .queue-add{
 	display: none;

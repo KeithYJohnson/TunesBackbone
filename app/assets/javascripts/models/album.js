@@ -15,11 +15,6 @@ app.models.Album = Backbone.Model.extend({
 		return this.attributes.artist;
 	},
 
-  getTracks: function() {
-    this.tracks.fetch();
-    return this.tracks
-  },
-
 	isFirstTrack: function(index) {
 		return index == 0;
 	},

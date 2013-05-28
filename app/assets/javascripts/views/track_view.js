@@ -16,3 +16,16 @@ app.views.TrackView = Backbone.View.extend({
 	// }
 
 }); 
+
+  // showTracks: function(){
+
+  //   _this = this
+  //   this.model.getTracks({
+  //     success: function(tracks){
+  //       console.log(tracks);
+  //       tracks.forEach(function(track){
+  //       _this.$el.find('.tracks').append("<li>"+track.attributes.title+"</li>");
+  //       });
+  //     }
+  //   });
+  // },

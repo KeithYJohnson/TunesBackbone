@@ -6,7 +6,8 @@ window.app.views.AlbumView = Backbone.View.extend({
 
   events: {
     'click .queue-add' : 'selectAlbum',
-    'click .show-tracks' : 'showTracks'
+    'click .show-tracks' : 'showTracks',
+    'click .hide-tracks' : 'hideTracks',
   },
 
 	render: function (){
@@ -20,15 +21,20 @@ window.app.views.AlbumView = Backbone.View.extend({
   },
 
   showTracks: function(){
+    console.log('hi');
+    var _this = this
+    this.model.tracks.fetch({
 
-    _this = this
-    tracks = this.model.getTracks();
-    tracks.forEach(function(track){
-        console.log(track);
-        console.log(track.attributes.title);
+      success: function(tracks){
+        console.log(tracks);
+        tracks.forEach(function(track){
         _this.$el.find('.tracks').append("<li>"+track.attributes.title+"</li>");
- 
+        });
+      }
     });
-    return this;
-  }
+  },
+
+  hideTracks: function(){
+      console.log(this);
+  }  
 });

@@ -2,10 +2,6 @@ app.views.Home = Backbone.View.extend({
 
   template: JST['templates/home'],
 
-  events: {
-    'click #add-album' : 'albumSelect'
-  },
-
   render: function() {        
     albumList = new app.collections.AlbumList();
     var _this = this;  

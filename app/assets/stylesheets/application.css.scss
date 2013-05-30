@@ -1,0 +1,125 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+
+ */
+
+ /*Basic Column Layout*/
+// body{
+// 	width: 100%;
+// }
+
+#wrapper{
+	width: 1100px;
+
+	border: 4px solid black;
+	position: fixed;
+}
+#player{
+	width: 300px;
+
+	border: 2px solid black;
+	position: relative;
+	float: left;
+	display: inline-block;
+	padding-bottom: 10px;
+	padding-left: 10px;	
+	background: #333333;
+	color: white;
+}
+#content{
+	width: 700px;
+
+	border: 2px solid black;
+	position: relative;
+	float: left;
+	display: inline-block;
+	padding-bottom: 10px;
+	padding-left: 20px;		
+}
+/*End Basic Column Layout*/
+
+/* NavBar */
+div.navbar-inverse{
+	background-color: red;
+}
+/*Album Info SASS*/
+
+table.album-info{
+	button{
+
+		transition: all 1s ease-in-out;
+		border-radius: 15px;
+
+		&:hover{
+			box-shadow: 0 0 15px rgba(78,179,209, 1);
+		}	
+		.btn-danger{
+			@extend button;
+
+			&:hover{
+			box-shadow: 0 0 15px rgba(255,47,30, 1);
+			}	
+
+		}
+	}
+
+	td {
+		text-transform: capitalize;
+		padding-left: 5px;
+	}
+	td.album-title{
+		color: #5f5651;
+	}
+	td.album-artist{
+		color: #778ca4;
+	}
+
+}
+
+.btn-small{
+	border-radius: 10px;
+}
+
+
+// td {
+// 	padding-left: 5px;
+// }
+
+img.remove-album{
+	height: 5px;
+	width: auto;
+	border: none;
+}
+
+li.playlist-album{
+	font-size: 20px;
+}
+
+img.album-remove{
+}
+
+button.hide-tracks{
+	display: none;
+}
+
+
+.playlist .album .queue-add{
+	display: none;
+}
+
+.library .album .queue-remove{
+	display: none;
+}
+
+.library .album .tracks {
+	display: none;
+}
